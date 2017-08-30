@@ -6,19 +6,11 @@
     <?php include('./views/common/style.html')?>
 </head>
 <body>
-    
-    <!-- 侧边栏 -->
-    <div class="aside">
-        <!-- 个人资料 -->
-        <div class="profile">
-            <!-- 头像 -->
-            <div class="avatar img-circle">
-                <img src="./uploads/avatar.jpg">
-            </div>
-            <h4>布头儿</h4>
-        </div>
-        <!-- 导航菜单 -->
-        <?php include('./views/common/aside.html') ?>
+
+<!-- 侧边栏 -->
+<div class="aside">
+    <!-- 导航菜单 -->
+    <?php include('./views/common/aside.html') ?>
     <!-- 主体 -->
     <div class="main">
         <div class="container-fluid">
@@ -73,14 +65,18 @@
                         <div class="form-group">
                             <div class="col-xs-7">
                                 <a href="./advert_list.html" class="btn btn-success btn-sm pull-right"> 添 加 </a>
-                            </div>                          
+                            </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-        <?php include('./views/common/script.html')?>
+<?php include('./views/common/script.html')?>
+<script type="text/javascript">
+    require(['teacheradd']);
+</script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿define(['jquery'],function ($) {
+﻿define(['jquery','cookie'],function ($) {
    // 给登陆按钮添加登录事件
    $("#loginBtn").on('click',function () {
        $.ajax({
@@ -8,7 +8,9 @@
            data:$('#loginForm').serialize(),
            success:function (data) {
                if(data.code == 200){
-                  location.href = '/main/index'
+                   // 请求成功后，将用户信息存到cookie中     JSON.stringify   是将对象转化为json的字符串
+                   $.cookie('loginInfo',JSON.stringify(data.result),{path : '/'});
+                   location.href = '/main/index';
                }else {
                    alert('用户名或者密码输入错误');
                }
