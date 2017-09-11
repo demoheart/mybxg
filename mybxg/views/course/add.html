@@ -6,11 +6,11 @@
     <?php include('./views/common/style.html')?>
 </head>
 <body>
-    
-    <!-- 侧边栏 -->
-    <div class="aside">
-        <!-- 导航菜单 -->
-      <?php include('./views/common/aside.html')?>
+
+<!-- 侧边栏 -->
+<div class="aside">
+    <!-- 导航菜单 -->
+    <?php include('./views/common/aside.html')?>
     <!-- 主体 -->
     <div class="main">
         <div class="container-fluid">
@@ -24,17 +24,19 @@
                 </ol>
                 <div class="steps create">
                     <div class="title">
-                        <h5>创建课程 <small>CREATE A COURSE</small></h5>
+                        <h5>创建课程
+                            <small>CREATE A COURSE</small>
+                        </h5>
                     </div>
-                    <form action="" class="form-horizontal col-xs-7">
+                    <form id="courseadd" method="post" class="form-horizontal col-xs-7">
                         <div class="form-group">
-                            <label for="" class="col-xs-2 control-label">课程标题</label>
+                            <label class="col-xs-2 control-label">课程标题</label>
                             <div class="col-xs-9">
-                                <input type="text" class="form-control input-sm" placeholder="请填写课程标题">
+                                <input type="text" name="cs_name" class="form-control input-sm" placeholder="请填写课程标题">
                             </div>
                         </div>
                         <div class="col-xs-11">
-                            <a href="/course/course_add_step1" class="btn btn-success btn-sm pull-right">创建课程</a>
+                            <input type="submit" class="btn btn-success btn-sm pull-right" value="创建课程">
                         </div>
                     </form>
                     <div class="extra col-xs-3">
@@ -45,7 +47,11 @@
             </div>
         </div>
     </div>
+</div>
 
-        <?php include('./views/common/script.html')?>
+<?php include('./views/common/script.html')?>
+<script type="text/javascript">
+    require(['courseadd']);
+</script>
 </body>
 </html>

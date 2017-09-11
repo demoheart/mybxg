@@ -1,6 +1,10 @@
-define(['jquery','template','util', 'cookie'], function ($,template,util) {
-    // NProgress.start();
-    // NProgress.done();
+define(['jquery','template','util','nprogress', 'cookie'], function ($,template,util,NProgress) {
+    //   状态位的监听
+    NProgress.start();
+    NProgress.done();
+
+
+    //   侧边栏高亮显示
     util.setMenu(location.pathname);
     // console.log(util);
     //  右侧菜单的伸缩切换

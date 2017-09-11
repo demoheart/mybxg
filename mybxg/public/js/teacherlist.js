@@ -1,7 +1,7 @@
-define(['jquery','template','util','bootstrap'],function ($,template,util) {
+define(['jquery','template','util','bootstrap','status'],function ($,template,util) {
     // 控制侧边菜单高亮显示
-    util.setMenu(location.pathName);
-    console.log(location.pathName);
+    util.setMenu(location.pathname);
+    console.log(location.pathname);
 
     // 教师列表渲染
     $.ajax({

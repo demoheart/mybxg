@@ -4,16 +4,47 @@ require.config({
         jquery:'jquery/jquery.min',
         cookie:'jquery-cookie/jquery.cookie',
         bootstrap:'bootstrap/js/bootstrap.min',
+        datepicker:'bootstrap-datepicker/js/bootstrap-datepicker.min',
+        language:'bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
         template:'artTemplate/template-web',
+        validate:'validate/jquery-validate',
+        uploadify:'uploadify/jquery.uploadify',
+        form:'jquery-form/jquery.form',
+        region:'jquery-region/jquery.region',
+        ckeditor:'ckeditor/ckeditor',
+        nprogress:'nprogress/nprogress',
+        jcrop:'jcrop/js/jcrop.min',
+        courselist:'../js/courselist',
+        courseadd:'../js/courseadd',
+        coursebasic:'../js/coursebasic',
+        coursepicture:'../js/coursepicture',
+        courselesson:'../js/courselesson',
+        settings:'../js/settings',
         teacherlist:'../js/teacherlist',
         teacheradd:'../js/teacheradd',
         util:'../js/util',
         common:'../js/common',
-        login:'../js/login'
+        login:'../js/login',
+        status:'../js/status'
     },
     shim:{
         bootstrap:{
             // 将非标准模块转化为标准模块
+            deps:['jquery']
+        },
+        language:{
+            deps:['jquery']
+        },
+        validate:{
+            deps:['jquery']
+        },
+        uploadify:{
+            deps:['jquery']
+        },
+        ekefitor:{
+            exports:'CKEDITOR'
+        },
+        jcrop:{
             deps:['jquery']
         }
     }
